@@ -13,24 +13,26 @@ A SwiftUI app that allows you to chat with Apple Intelligence using the new [Fou
 
 ## Requirements
 
-- iOS 26.0+
+- iOS/iPadOS/MacOS 26.0+
 - Device with Apple Intelligence support
-- Xcode 26.0 or later
+- Xcode 26.0 beta or newer
 
 ## Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/PallavAg/apple-intelligence-chat.git
+git clone https://github.com/PallavAg/Apple-Intelligence-Chat.git
 ```
 
 2. Open the project in Xcode:
+
 ```bash
-cd apple-intelligence-chat
+cd Apple-Intelligence-Chat
 open "Apple Intelligence Chat.xcodeproj"
 ```
 
-3. Build and run on a compatible device or simulator
+3. Select a development team, then run on a compatible device or simulator
 
 ## Usage
 
