@@ -31,8 +31,9 @@ struct ContentView: View {
     @AppStorage("systemInstructions") private var systemInstructions = AppSettings.systemInstructions
     
     // Haptics
-    private let hapticButtonGenerator = UIImpactFeedbackGenerator(style: .medium)
+#if os(iOS)
     private let hapticStreamGenerator = UISelectionFeedbackGenerator()
+#endif
     
     var body: some View {
         NavigationStack {
@@ -66,7 +67,9 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Apple Intelligence Chat")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
             .toolbar { toolbarContent }
             .sheet(isPresented: $showSettings) {
                 SettingsView {
@@ -121,19 +124,34 @@ struct ContentView: View {
     
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
+#if os(iOS)
         ToolbarItem(placement: .navigationBarLeading) {
-            Button(action: resetConversation) { Label("New Chat", systemImage: "square.and.pencil") }
+            Button(action: resetConversation) {
+                Label("New Chat", systemImage: "square.and.pencil")
+            }
         }
         ToolbarItem(placement: .navigationBarTrailing) {
-            Button(action: { showSettings = true }) { Label("Settings", systemImage: "gearshape") }
+            Button(action: { showSettings = true }) {
+                Label("Settings", systemImage: "gearshape")
+            }
         }
+#else
+        ToolbarItem {
+            Button(action: resetConversation) {
+                Label("New Chat", systemImage: "square.and.pencil")
+            }
+        }
+        ToolbarItem {
+            Button(action: { showSettings = true }) {
+                Label("Settings", systemImage: "gearshape")
+            }
+        }
+#endif
     }
     
     // MARK: - Model Interaction
     
     private func handleSendOrStop() {
-        hapticButtonGenerator.impactOccurred()
-        
         if isResponding {
             stopStreaming()
         } else {
@@ -155,8 +173,6 @@ struct ContentView: View {
         // Add empty assistant message for streaming
         messages.append(ChatMessage(role: .assistant, text: ""))
         
-        hapticStreamGenerator.prepare()
-        
         streamingTask = Task {
             do {
                 if session == nil { session = createSession() }
@@ -172,7 +188,9 @@ struct ContentView: View {
                 if useStreaming {
                     let stream = currentSession.streamResponse(to: prompt, options: options)
                     for try await partialResponse in stream {
+#if os(iOS)
                         hapticStreamGenerator.selectionChanged()
+#endif
                         updateLastMessage(with: partialResponse)
                     }
                 } else {
@@ -206,7 +224,6 @@ struct ContentView: View {
     }
     
     private func resetConversation() {
-        hapticButtonGenerator.impactOccurred()
         stopStreaming()
         messages.removeAll()
         session = nil
